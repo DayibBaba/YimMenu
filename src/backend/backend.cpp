@@ -14,6 +14,7 @@
 #include "services/vehicle/vehicle_control_service.hpp"
 #include "services/vehicle/xml_vehicles_service.hpp"
 #include "services/xml_maps/xml_map_service.hpp"
+#include "services/lua_workshop/lua_workshop.hpp"
 
 namespace big
 {
@@ -29,6 +30,7 @@ namespace big
 		g_xml_map_service->fetch_xml_files();
 		g_custom_teleport_service.fetch_saved_locations();
 		g_ped_animation_service.fetch_saved_animations();
+		//g_lua_workshop_service.initialize();
 
 		while (g_running)
 		{
